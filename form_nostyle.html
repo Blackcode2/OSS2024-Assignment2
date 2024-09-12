@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <div class="top">
+          <h2>Checkout form</h2>
+          <p>
+            Below is an example form built entirely with Bootstrap’s form
+            controls. Each required form group has a validation state that can
+            be triggered by attempting to submit the form without completing it.
+          </p>
+        </div>
+        <div class="formBody">
+          <div>
+            <h4>Billing address</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder
+                    value
+                    required
+                  />
+                  <!-- <div class="invalid-feedback"> -->
+                  <!-- valid first name is required.
+                  </div> -->
+                </div>
+                <div class="col-sm-6">
+                  <label for="lastName">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder
+                    value
+                    required
+                  />
+                  <!-- <div class="invalid-feedback"> -->
+                  <!-- valid last name is required.
+                  </div> -->
+                </div>
+                <div class="col-12">
+                  <label for="username" class="form-label"> username </label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text"> @ </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      placeholder="Username"
+                      required
+                    />
+                    <!-- <div class="invalid-feedback"> -->
+                    <!-- Your username is required.
+                    </div> -->
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">
+                    Email
+                    <span class="text-muted">(Optional)</span>
+                  </label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="you@example.com"
+                  />
+                  <!-- <div class="invalid-feedback"> -->
+                  <!-- Please enter a valid email address for shipping updates.
+                  </div> -->
+                </div>
+                <div class="col-12">
+                  <label for="address" class="form-label">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="1234 Main St"
+                    required
+                  />
+                  <!-- <div class="invalid-feedback"> -->
+                  <!-- Please enter yor shipping address.
+                  </div> -->
+                </div>
+                <div class="col-12">
+                  <label for="address2" class="form-label">
+                    Address 2
+                    <span>(Optional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address2"
+                    placeholder="Aparstment or suite"
+                  />
+                </div>
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Choose...</option>
+                    <optgroup label="Asia">
+                      <option value="">South Korea</option>
+                      <option value="">Japan</option>
+                      <option value="">Thailand</option>
+                    </optgroup>
+                    <optgroup label="North America">
+                      <option value="">United States</option>
+                      <option value="">Canada</option>
+                    </optgroup>
+                  </select>
+                  <!-- <div class="invalid-feedback"> -->
+                  <!-- Please select a valid country.
+                  </div> -->
+                </div>
+                <div class="col-md-4">
+                  <label for="state" class="form-label">State</label>
+                  <select class="form-select" id="state" required>
+                    <option>Choose...</option>
+                    <option value="">Pohang</option>
+                  </select>
+                  <!-- <div class="invalid-feedback"> -->
+                  <!-- Please provide a valid state.
+                  </div> -->
+                </div>
+                <div class="col-md-3">
+                  <label for="zip" class="form-label">Zip</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="zip"
+                    placeholder
+                    required
+                  />
+                  <!-- <div class="invalid-feedback">Zip code required.</div> -->
+                </div>
+              </div>
+              <hr class="my-4" />
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="dame-address"
+                />
+                <label for="same-address" class="form-check-label"
+                  >Shipping address is the same as my billing address</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="save-info"
+                />
+                <label for="save-info" class="form-check-label"
+                  >Save this information for next time</label
+                >
+              </div>
+              <hr class="my-4" />
+              <h4>Payment</h4>
+              <div class="my-3">
+                <fieldset>
+                  <legend>Choose your payment</legend>
+                  <input
+                    type="radio"
+                    id="credit"
+                    name="paymentMethod"
+                    class="form-check-input"
+                    checked
+                    required
+                  />
+                  <label for="credit" class="form-check-label"
+                    >Check card</label
+                  >
+                  <input
+                    type="radio"
+                    id="debit"
+                    name="paymentMethod"
+                    class="form-check-input"
+                    required
+                  />
+                  <label for="debit" class="form-check-label">Debit card</label>
+                  <input
+                    type="radio"
+                    id="paypal"
+                    name="paymentMethod"
+                    class="form-check-input"
+                    required
+                  />
+                  <label for="paypal" class="form-check-label">Paypal</label>
+                </fieldset>
+                <!-- <input
+                    type="radio"
+                    id="credit"
+                    name="paymentMethod"
+                    class="form-check-input"
+                    checked
+                    required
+                  />
+                  <label for="credit" class="form-check-label"
+                    >Check card</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    id="debit"
+                    name="paymentMethod"
+                    class="form-check-input"
+                    required
+                  />
+                  <label for="debit" class="form-check-label">Debit card</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    id="paypal"
+                    name="paymentMethod"
+                    class="form-check-input"
+                    required
+                  />
+                  <label for="paypal" class="form-check-label">Paypal</label> -->
+                <!-- </div> -->
+              </div>
+              <hr class="my-4" />
+              <div class="request" id="request">
+                <div id="requestWrapper">
+                  <label for="request">Request</label>
+                  <textarea name="" id=""></textarea>
+                </div>
+                <div id="requestDate">
+                  <label for="date">Date</label>
+                  <input type="date" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
