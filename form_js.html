@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script></script>
+    <script>
+      // let firstName;
+      function getName() {
+        let firstName = document.getElementById("firstName").value;
+        if (firstName == null) {
+          console.log("null");
+        } else {
+          console.log(firstName);
+        }
+      }
+
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", getName());
+    </script>
     <style>
       body {
         margin: 0;
@@ -539,7 +553,11 @@
               </div>
               <hr class="my-4" />
               <div id="buttonWrapper">
-                <button class="w-100 btn btn-primary btn-lg" type="submit">
+                <button
+                  class="w-100 btn btn-primary btn-lg"
+                  type="submit"
+                  id="submitButton"
+                >
                   Continue to checkout
                 </button>
               </div>
