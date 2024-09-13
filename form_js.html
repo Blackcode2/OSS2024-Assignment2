@@ -4,21 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      // let firstName;
-      function getName() {
-        let firstName = document.getElementById("firstName").value;
-        if (firstName == null) {
-          console.log("null");
-        } else {
-          console.log(firstName);
-        }
-      }
-
-      document
-        .getElementById("submitButton")
-        .addEventListener("click", getName());
-    </script>
     <style>
       body {
         margin: 0;
@@ -42,6 +27,47 @@
         margin-left: auto;
       }
 
+      .mb-4 {
+        margin-bottom: 1.5rem !important;
+      }
+
+      .mx-auto {
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
+
+      .d-block {
+        display: block !important;
+      }
+
+      img,
+      svg {
+        vertical-align: middle;
+      }
+
+      .h2,
+      h2 {
+        font-size: calc(1.325rem + 0.9vw);
+      }
+
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5,
+      .h6,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
       .text-center {
         /* !important 키워드: CSS내에 있는 속성 값 중 우선순위 부여  */
         text-align: center !important;
@@ -57,9 +83,26 @@
         font-weight: 300;
       }
 
-      .g-5 {
+      .g-5,
+      .gy-5 {
         --bs-gutter-y: 3rem;
+      }
+
+      .g-5,
+      .gx-5 {
         --bs-gutter-x: 3rem;
+      }
+
+      .justify-content-between {
+        justify-content: space-between !important;
+      }
+
+      .d-flex {
+        display: flex !important;
+      }
+
+      .align-items-center {
+        align-items: center !important;
       }
 
       .mb-3 {
@@ -68,6 +111,284 @@
 
       h4 {
         font-size: calc(1.275rem + 0.3vw);
+      }
+
+      .text-primary {
+        --bs-text-opacity: 1;
+        color: rgba(13, 110, 253, 1) !important;
+      }
+
+      .rounded-pill {
+        border-radius: 50rem !important;
+      }
+
+      .bg-primary {
+        --bs-bg-opacity: 1;
+        background-color: rgba(13, 110, 253, 1) !important;
+      }
+
+      .my-0 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .h6,
+      h6 {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5,
+      .h6,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .text-muted {
+        --bs-text-opacity: 1;
+        color: #6c757d !important;
+      }
+
+      .text-success {
+        --bs-text-opacity: 1;
+        color: rgba(25, 135, 84, 1) !important;
+      }
+
+      .bg-light {
+        --bs-bg-opacity: 1;
+        background-color: rgba(248, 249, 250, 1) !important;
+      }
+
+      .badge {
+        --bs-badge-padding-x: 0.65em;
+        --bs-badge-padding-y: 0.35em;
+        --bs-badge-font-size: 0.75em;
+        --bs-badge-font-weight: 700;
+        --bs-badge-color: #fff;
+        --bs-badge-border-radius: 0.375rem;
+        display: inline-block;
+        padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+        font-size: var(--bs-badge-font-size);
+        font-weight: var(--bs-badge-font-weight);
+        line-height: 1;
+        color: var(--bs-badge-color);
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: var(--bs-badge-border-radius);
+      }
+
+      .list-group {
+        --bs-list-group-color: #212529;
+        --bs-list-group-bg: #fff;
+        --bs-list-group-border-color: rgba(0, 0, 0, 0.125);
+        --bs-list-group-border-width: 1px;
+        --bs-list-group-border-radius: 0.375rem;
+        --bs-list-group-item-padding-x: 1rem;
+        --bs-list-group-item-padding-y: 0.5rem;
+        --bs-list-group-action-color: #495057;
+        --bs-list-group-action-hover-color: #495057;
+        --bs-list-group-action-hover-bg: #f8f9fa;
+        --bs-list-group-action-active-color: #212529;
+        --bs-list-group-action-active-bg: #e9ecef;
+        --bs-list-group-disabled-color: #6c757d;
+        --bs-list-group-disabled-bg: #fff;
+        --bs-list-group-active-color: #fff;
+        --bs-list-group-active-bg: #0d6efd;
+        --bs-list-group-active-border-color: #0d6efd;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        border-radius: var(--bs-list-group-border-radius);
+      }
+
+      dl,
+      ol,
+      ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      ol,
+      ul {
+        padding-left: 2rem;
+      }
+
+      .list-group-item:first-child {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      .lh-sm {
+        line-height: 1.25 !important;
+      }
+
+      .list-group-item {
+        position: relative;
+        display: block;
+        padding: var(--bs-list-group-item-padding-y)
+          var(--bs-list-group-item-padding-x);
+        color: var(--bs-list-group-color);
+        text-decoration: none;
+        background-color: var(--bs-list-group-bg);
+        border: var(--bs-list-group-border-width) solid
+          var(--bs-list-group-border-color);
+      }
+
+      .p-2 {
+        padding: 0.5rem !important;
+      }
+
+      .card {
+        --bs-card-spacer-y: 1rem;
+        --bs-card-spacer-x: 1rem;
+        --bs-card-title-spacer-y: 0.5rem;
+        --bs-card-border-width: 1px;
+        --bs-card-border-color: rgba(0, 0, 0, 0.17);
+        --bs-card-border-radius: 0.375rem;
+        --bs-card-box-shadow: ;
+        --bs-card-inner-border-radius: calc(0.375rem - 1px);
+        --bs-card-cap-padding-y: 0.5rem;
+        --bs-card-cap-padding-x: 1rem;
+        --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
+        --bs-card-cap-color: ;
+        --bs-card-height: ;
+        --bs-card-color: ;
+        --bs-card-bg: #fff;
+        --bs-card-img-overlay-padding: 1rem;
+        --bs-card-group-margin: 0.75rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        height: var(--bs-card-height);
+        word-wrap: break-word;
+        background-color: var(--bs-card-bg);
+        background-clip: border-box;
+        border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+        border-radius: var(--bs-card-border-radius);
+      }
+
+      .input-group {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+      }
+
+      .input-group > .form-control,
+      .input-group > .form-floating,
+      .input-group > .form-select {
+        position: relative;
+        flex: 1 1 auto;
+        width: 1%;
+        min-width: 0;
+      }
+
+      .input-group
+        > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+          .valid-feedback
+        ):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .btn {
+        --bs-btn-padding-x: 0.75rem;
+        --bs-btn-padding-y: 0.375rem;
+        --bs-btn-font-family: ;
+        --bs-btn-font-size: 1rem;
+        --bs-btn-font-weight: 400;
+        --bs-btn-line-height: 1.5;
+        --bs-btn-color: #212529;
+        --bs-btn-bg: transparent;
+        --bs-btn-border-width: 1px;
+        --bs-btn-border-color: transparent;
+        --bs-btn-border-radius: 0.375rem;
+        --bs-btn-hover-border-color: transparent;
+        --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+          0 1px 1px rgba(0, 0, 0, 0.075);
+        --bs-btn-disabled-opacity: 0.65;
+        --bs-btn-focus-box-shadow: 0 0 0 0.25rem
+          rgba(var(--bs-btn-focus-shadow-rgb), 0.5);
+        display: inline-block;
+        padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+        font-family: var(--bs-btn-font-family);
+        font-size: var(--bs-btn-font-size);
+        font-weight: var(--bs-btn-font-weight);
+        line-height: var(--bs-btn-line-height);
+        color: var(--bs-btn-color);
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+        border-radius: var(--bs-btn-border-radius);
+        background-color: var(--bs-btn-bg);
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .btn-secondary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #6c757d;
+        --bs-btn-border-color: #6c757d;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #5c636a;
+        --bs-btn-hover-border-color: #565e64;
+        --bs-btn-focus-shadow-rgb: 130, 138, 145;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #565e64;
+        --bs-btn-active-border-color: #51585e;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #6c757d;
+        --bs-btn-disabled-border-color: #6c757d;
+        width: 40%;
+      }
+
+      .btn-secondary:hover {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #6c757d;
+        --bs-btn-border-color: #6c757d;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #5c636a;
+        --bs-btn-hover-border-color: #565e64;
+        --bs-btn-focus-shadow-rgb: 130, 138, 145;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #565e64;
+        --bs-btn-active-border-color: #51585e;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #6c757d;
+        --bs-btn-disabled-border-color: #6c757d;
+        width: 40%;
+      }
+
+      .input-group .btn {
+        position: relative;
+        z-index: 2;
+      }
+
+      button:not(:disabled) {
+        cursor: pointer;
       }
 
       .row {
@@ -129,8 +450,8 @@
         appearance: none;
         border-radius: 0.375rem;
         /* animation 효고ㅏ를 줄때 사용 요소의 스타일 변화가 있을 때 작동 (버튼 클릭, hover etc)
-            amimation 속성은 변화가 없어도 페이지 시작시 작동
-        */
+              amimation 속성은 변화가 없어도 페이지 시작시 작동
+          */
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       }
 
@@ -166,6 +487,14 @@
       .form-check-input:checked {
         background-color: #0d6efd;
         border-color: #0d6efd;
+      }
+
+      .form-check-input:checked[type="radio"] {
+        background-image: url("images/dot.svg");
+      }
+
+      .form-check-input:checked[type="checkbox"] {
+        background-image: url("images/check.svg");
       }
 
       .form-check-input .form-check {
@@ -280,7 +609,7 @@
 
       #buttonWrapper {
         text-align: center;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
       }
 
       button {
@@ -315,10 +644,107 @@
         color: #fff;
       }
 
+      .invalid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        color: #dc3545;
+      }
+
+      .form-control.is-invalid,
+      .was-validated .form-control:invalid {
+        border-color: #dc3545;
+        padding-right: calc(1.5em + 0.75rem);
+        /* background-image: url(
+            data:image/svg + xml,
+            %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 12 12"width="12"height="12"fill="none"stroke="%23dc3545"%3e%3ccirclecx="6"cy="6"r="4.5"/%3e%3cpathstroke-linejoin="round"d="M5.8 3.6h.4L6 6.5z"/%3e%3ccirclecx="6"cy="8.2"r=".6"fill="%23dc3545"stroke="none"/%3e%3c/svg%3e
+          ); */
+        background-repeat: no-repeat;
+        background-position: right calc(0.375em + 0.1875rem) center;
+        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+      }
+
+      .form-control.is-valid,
+      .was-validated .form-control:valid {
+        border-color: #198754;
+        padding-right: calc(1.5em + 0.75rem);
+        /* background-image: url(
+            data:image/svg + xml,
+            %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 8 8"%3e%3cpathfill="%23198754"d="M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z"/%3e%3c/svg%3e
+          ); */
+        background-repeat: no-repeat;
+        background-position: right calc(0.375em + 0.1875rem) center;
+        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+      }
+
+      .small,
+      small {
+        font-size: 0.875em;
+      }
+
+      #submitButton {
+        width: 100%;
+        height: 3rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        border-width: 1px;
+        border-radius: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        color: #fff;
+      }
+
+      #submitButton:hover {
+        width: 100%;
+        height: 3rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        border-width: 1px;
+        border-radius: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+        color: #fff;
+      }
+
+      .mb-1 {
+        margin-bottom: 0.25rem !important;
+      }
+
+      .list-inline {
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .list-inline-item:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      .list-inline-item {
+        display: inline-block;
+      }
+
+      a {
+        color: "#0d6efd";
+        text-decoration: underline;
+      }
+
       @media (min-width: 768px) {
         .col-md-5 {
           flex: 0 0 auto;
           width: 41.66666667%;
+        }
+
+        .order-md-last {
+          order: 6 !important;
         }
 
         .col-md-4 {
@@ -330,6 +756,22 @@
           flex: 0 0 auto;
           width: 25%;
         }
+
+        .col-md-6 {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .col-lg-4 {
+          flex: 0 0 auto;
+          width: 33.33333333%;
+        }
+        .col-lg-8 {
+          flex: 0 0 auto;
+          width: 66.66666667%;
+        }
       }
     </style>
   </head>
@@ -337,6 +779,13 @@
     <div class="container">
       <main>
         <div class="py-5 text-center">
+          <img
+            class="d-block mx-auto mb-4"
+            src="images/bootstrap-logo.svg"
+            alt=""
+            width="72"
+            height="57"
+          />
           <h2>Checkout form</h2>
           <p class="lead">
             Below is an example form built entirely with Bootstrap’s form
@@ -345,7 +794,61 @@
           </p>
         </div>
         <div class="row g-5">
-          <div class="col-md7 col-lg-8">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Your cart</span>
+              <span class="badge bg-primary rounded-pill">3</span>
+            </h4>
+            <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Product name</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$12</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Second product</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$8</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">Third item</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$5</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between bg-light"
+              >
+                <div class="text-success">
+                  <h6 class="my-0">Promo code</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class="text-success">−$5</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Total (USD)</span>
+                <strong>$20</strong>
+              </li>
+            </ul>
+            <form class="card p-2">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Promo code"
+                />
+                <button type="submit" id="subButton" class="btn btn-secondary">
+                  Redeem
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md7 col-lg-8" id="rowForTwoBoxes">
             <h4 class="mb-3">Billing address</h4>
             <form class="needs-validation" novalidate>
               <div class="row g-3">
@@ -359,9 +862,9 @@
                     value
                     required
                   />
-                  <!-- <div class="invalid-feedback"> -->
-                  <!-- valid first name is required.
-                  </div> -->
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
                 </div>
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Last name</label>
@@ -373,9 +876,9 @@
                     value
                     required
                   />
-                  <!-- <div class="invalid-feedback"> -->
-                  <!-- valid last name is required.
-                  </div> -->
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
                 </div>
                 <div class="col-12">
                   <label for="username" class="form-label"> Username </label>
@@ -387,9 +890,9 @@
                       placeholder="Username"
                       required
                     />
-                    <!-- <div class="invalid-feedback"> -->
-                    <!-- Your username is required.
-                    </div> -->
+                    <div class="invalid-feedback">
+                      Your username is required.
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
@@ -403,9 +906,9 @@
                     id="email"
                     placeholder="you@example.com"
                   />
-                  <!-- <div class="invalid-feedback"> -->
-                  <!-- Please enter a valid email address for shipping updates.
-                  </div> -->
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
                 </div>
                 <div class="col-12">
                   <label for="address" class="form-label">Address</label>
@@ -416,9 +919,9 @@
                     placeholder="1234 Main St"
                     required
                   />
-                  <!-- <div class="invalid-feedback"> -->
-                  <!-- Please enter yor shipping address.
-                  </div> -->
+                  <div class="invalid-feedback">
+                    Please enter yor shipping address.
+                  </div>
                 </div>
                 <div class="col-12">
                   <label for="address2" class="form-label">
@@ -446,9 +949,9 @@
                       <option value="">Canada</option>
                     </optgroup>
                   </select>
-                  <!-- <div class="invalid-feedback"> -->
-                  <!-- Please select a valid country.
-                  </div> -->
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
                 </div>
                 <div class="col-md-4">
                   <label for="state" class="form-label">State</label>
@@ -456,9 +959,9 @@
                     <option>Choose...</option>
                     <option value="">Pohang</option>
                   </select>
-                  <!-- <div class="invalid-feedback"> -->
-                  <!-- Please provide a valid state.
-                  </div> -->
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
                 </div>
                 <div class="col-md-3">
                   <label for="zip" class="form-label">Zip</label>
@@ -469,7 +972,7 @@
                     placeholder
                     required
                   />
-                  <!-- <div class="invalid-feedback">Zip code required.</div> -->
+                  <div class="invalid-feedback">Zip code required.</div>
                 </div>
               </div>
               <hr class="my-4" />
@@ -477,7 +980,7 @@
                 <input
                   type="checkbox"
                   class="form-check-input"
-                  id="dame-address"
+                  id="same-address"
                 />
                 <label for="same-address" class="form-check-label"
                   >Shipping address is the same as my billing address</label
@@ -535,6 +1038,64 @@
                   </div>
                 </fieldset>
               </div>
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label">Name on card</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-name"
+                    placeholder=""
+                    required=""
+                  />
+                  <small class="text-muted"
+                    >Full name as displayed on card</small
+                  >
+                  <div class="invalid-feedback">Name on card is required</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label"
+                    >Credit card number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-number"
+                    placeholder=""
+                    required=""
+                  />
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label"
+                    >Expiration</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-expiration"
+                    placeholder=""
+                    required=""
+                  />
+                  <div class="invalid-feedback">Expiration date required</div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cc-cvv"
+                    placeholder=""
+                    required=""
+                  />
+                  <div class="invalid-feedback">Security code required</div>
+                </div>
+              </div>
               <hr class="my-4" />
               <h4>Request</h4>
               <div class="request" id="request">
@@ -549,6 +1110,7 @@
                     >Pick preferred delivery date</label
                   >
                   <input type="date" id="date-picker" />
+                  <div class="invalid-feedback">Pick your delivery date</div>
                 </div>
               </div>
               <hr class="my-4" />
@@ -565,6 +1127,241 @@
           </div>
         </div>
       </main>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2017–2022 Company Name</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
     </div>
   </body>
+  <script>
+    function changeCssForInvalid(id, index) {
+      document.getElementsByClassName("invalid-feedback")[index].style.display =
+        "block";
+      document.getElementById(id).style.borderColor = "#dc3545";
+      document.getElementById(id).addEventListener("focus", function () {
+        this.style.boxShadow = "0 0 0 0.25rem #fabbb6";
+      });
+    }
+
+    function changeCssForValid(id) {
+      document.getElementById(id).style.borderColor = "#198754";
+      document.getElementById(id).addEventListener("focus", function () {
+        this.style.boxShadow = "0 0 0 0.25rem #b6e0c1";
+      });
+    }
+
+    function changeCssForValidCheckBox(id) {
+      document.getElementById(id).style.borderColor = "#198754";
+    }
+
+    function changeCssForValidRadioButton() {
+      let names = document.getElementsByName("paymentMethod");
+      for (var i = 0; i < names.length; i++) {
+        if (names[i].checked == true) {
+          names[i].style.backgroundColor = "#198754";
+        }
+        names[i].style.borderColor = "#198754";
+      }
+    }
+
+    function changeCssForValiFormCheckLabel(id) {
+      let labels = document.getElementsByClassName("form-check-label");
+      for (var i = 0; i < labels.length; i++) {
+        labels[i].style.color = "#198754";
+      }
+    }
+
+    function validateName() {
+      let firstName = document.getElementById("firstName").value;
+      let lastName = document.getElementById("lastName").value;
+      if (firstName == null || firstName == "") {
+        changeCssForInvalid("firstName", 0);
+      } else {
+        changeCssForValid("firstName");
+      }
+
+      if (lastName == null || lastName == "") {
+        changeCssForInvalid("lastName", 1);
+      } else {
+        changeCssForValid("lastName");
+      }
+    }
+
+    function validateUserName() {
+      let inputValue = document.getElementById("username").value;
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid("username", 2);
+      } else {
+        changeCssForValid("username");
+      }
+    }
+
+    function validateEmail() {
+      let inputValue = document.getElementById("email").value;
+      let id = "email";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForValid(id);
+      } else {
+        var validRegex =
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        if (inputValue.match(validRegex)) {
+          changeCssForValid(id);
+        } else {
+          changeCssForInvalid(id, 3);
+        }
+      }
+    }
+
+    function validateAddress() {
+      let inputValue = document.getElementById("address").value;
+      let id = "address";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid(id, 4);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateAddress2() {
+      let inputValue = document.getElementById("address2").value;
+      let id = "address2";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForValid(id);
+      } else {
+        // changeCssForInvalid(id, 4);
+      }
+    }
+
+    function validateCountry() {
+      let inputValue = document.getElementById("country").value;
+      let id = "country";
+
+      if (inputValue == null || inputValue == "" || inputValue == "Choose...") {
+        changeCssForInvalid(id, 5);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateState() {
+      let inputValue = document.getElementById("state").value;
+      let id = "state";
+
+      if (inputValue == null || inputValue == "" || inputValue == "Choose...") {
+        changeCssForInvalid(id, 6);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateZip() {
+      let inputValue = document.getElementById("zip").value;
+      let id = "zip";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid(id, 7);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateCheckAndRadio() {
+      changeCssForValidCheckBox("same-address");
+      changeCssForValidCheckBox("save-info");
+      changeCssForValidRadioButton();
+      changeCssForValiFormCheckLabel();
+    }
+
+    function validateRequestTextArea() {
+      let inputValue = document.getElementById("request-text-area").value;
+      let id = "request-text-area";
+
+      changeCssForValid(id);
+    }
+
+    function validateDate() {
+      let inputValue = document.getElementById("date-picker").value;
+      let id = "date-picker";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid(id, 8);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateCardName() {
+      let inputValue = document.getElementById("cc-name").value;
+      let id = "cc-name";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid(id, 9);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateCardNumber() {
+      let inputValue = document.getElementById("cc-number").value;
+      let id = "cc-number";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid(id, 10);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateCardExpiration() {
+      let inputValue = document.getElementById("cc-expiration").value;
+      let id = "cc-expiration";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid(id, 11);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    function validateCardCvv() {
+      let inputValue = document.getElementById("cc-cvv").value;
+      let id = "cc-cvv";
+
+      if (inputValue == null || inputValue == "") {
+        changeCssForInvalid(id, 12);
+      } else {
+        changeCssForValid(id);
+      }
+    }
+
+    document
+      .getElementById("submitButton")
+      .addEventListener("click", function () {
+        event.preventDefault();
+        validateName();
+        validateUserName();
+        validateEmail();
+        validateAddress();
+        validateAddress2();
+        validateCountry();
+        validateState();
+        validateZip();
+        validateCheckAndRadio();
+        validateRequestTextArea();
+        validateDate();
+        validateCardName();
+        validateCardNumber();
+        validateCardExpiration();
+        validateCardCvv();
+      });
+  </script>
 </html>

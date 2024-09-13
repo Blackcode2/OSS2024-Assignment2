@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      input {
+        background-color: antiquewhite;
+        line-height: 1.5rem;
+      }
+      input:focus {
+        background-color: lightblue;
+        line-height: 1.5rem;
+      }
+
+      button {
+        width: 100px;
+        height: 30px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #add {
+        background-color: blue;
+        color: white;
+        border-color: transparent;
+      }
+      #add:hover {
+        background-color: rgba(0, 0, 255, 0.795);
+        color: white;
+        border-color: transparent;
+      }
+
+      #delete {
+        background-color: green;
+        color: white;
+        border-color: transparent;
+      }
+
+      #delete:hover {
+        background-color: rgba(0, 128, 0, 0.822);
+        color: white;
+        border-color: transparent;
+      }
+
+      #list-wrapper {
+        margin-top: 20px;
+      }
+
+      ul {
+        display: inline-block;
+        display: center;
+      }
+
+      li {
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 10px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="title">
+        <h1>Dynamic Web page</h1>
+      </div>
+      <div id="input-wrapper">
+        <form action="">
+          <input type="text" name="" id="memo" />
+          <button id="add">Add</button>
+          <button id="delete">Delete</button>
+        </form>
+      </div>
+      <div id="list-wrapper">
+        <ul id="list"></ul>
+      </div>
+    </main>
+  </body>
+  <script>
+    document.getElementById("add").addEventListener("click", function () {
+      event.preventDefault();
+      let inputValue = document.getElementById("memo").value;
+
+      if (inputValue != null && inputValue != "") {
+        let inputList = inputValue.split(",");
+        for (var i = 0; i < inputList.length; i++) {
+          let tag = document.createElement("li");
+          tag.innerHTML = inputList[i];
+          document.querySelector("ul").appendChild(tag);
+        }
+      }
+      document.getElementById("memo").value = null;
+    });
+
+    document.getElementById("delete").addEventListener("click", function () {
+      event.preventDefault();
+      let lis = document.querySelectorAll("li");
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].parentNode.removeChild(lis[i]);
+      }
+    });
+  </script>
+</html>
