@@ -39,11 +39,11 @@
           </div>
           <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" id="price" />
+            <input type="number" class="form-control" id="price" />
           </div>
           <div class="mb-3">
             <label for="quantity" class="form-label">Quantity</label>
-            <input type="text" class="form-control" id="quantity" />
+            <input type="number" class="form-control" id="quantity" />
           </div>
         </div>
         <div id="button-warpper" class="gap-2 d-md-flex">
@@ -80,8 +80,12 @@
 
     function validatePrice() {
       let inputValue = document.getElementById("price").value;
-
-      if (inputValue == null || inputValue == "") {
+      var pricePattern = /^\d+(\.\d{0,2})?$/;
+      if (
+        inputValue == null ||
+        inputValue == "" ||
+        !pricePattern.test(inputValue)
+      ) {
         return 1;
       } else {
         return 0;
@@ -91,7 +95,11 @@
     function validateQuantity() {
       let inputValue = document.getElementById("quantity").value;
 
-      if (inputValue == null || inputValue == "") {
+      if (
+        inputValue == null ||
+        inputValue == "" ||
+        !Number.isInteger(Number(inputValue))
+      ) {
         return 1;
       } else {
         return 0;
