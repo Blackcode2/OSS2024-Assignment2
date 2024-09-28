@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body>
+    <div id="body-wrapper">
+      <header>
+        <h1>Add product information</h1>
+      </header>
+      <main>
+        <div id="form-wrapper">
+          <label for="category" class="form-label"> Category </label>
+          <select id="category" class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Food</option>
+            <option value="2">Electronics</option>
+            <option value="3">Cloth</option>
+            <option value="4">Book</option>
+          </select>
+          <div class="mb-3">
+            <label for="product" class="form-label">Product</label>
+            <input type="text" class="form-control" id="product" />
+          </div>
+          <div class="mb-3"></div>
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" />
+          </div>
+          <div class="mb-3"></div>
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="quantity" />
+          </div>
+        </div>
+        <div id="button-warpper">
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+            <button type="button" class="btn btn-danger" id="cancle">Cancle</button>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    function validateCategory(){
+        let inputValue = document.getElementById("category").value;
+
+      if (inputValue == "Open this select menu" || inputValue == null) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+
+    function validateProduct(){
+        let inputValue = document.getElementById("product").value;
+
+      if (inputValue == null || inputValue == "") {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+
+    function validatePrice(){
+        let inputValue = document.getElementById("price").value;
+
+      if (inputValue == null || inputValue == "") {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+
+    function validateQuantity(){
+        let inputValue = document.getElementById("quantity").value;
+
+      if (inputValue == null || inputValue == "") {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+
+    function validateInputs(){
+        let res = 0;
+        res += validateCategory();
+        res += validateProduct();
+        res += validatePrice();
+        res += validateQuantity();
+
+        if(res == 0){
+            alert("Item added");
+            location.href="index.html";
+        } else {
+            alert("Fill all the inputs");
+        }
+    }
+
+    document.getElementById("submit").addEventListener("click", function(){
+        event.preventDefault();
+        validateInputs();
+    });
+
+    document.getElementById("cancle").addEventListener("click", function(){
+        event.preventDefault();
+        location.href="index.html";
+    });
+
+  </script>
+</html>
